@@ -14,6 +14,7 @@ class HomeScreen extends StatelessWidget {
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
+          resizeToAvoidBottomInset: false,
           appBar: AppBar(
             title:Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -145,109 +146,123 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height:20,),
+                //listview
+                Expanded(
+                  child: Container(
+                    child: ListView.builder(
+                        itemCount: 3,
+                        itemBuilder: (context,index){
+                          return GestureDetector(
+                            onTap: (){
 
-                Column(
-                  children: [
-                    Container(
-                      height:size.height/2.2,
-                      // color: Colors.pinkAccent,
-                      child: Stack(
-                        children: [
-                          Column(
-                            children: [
-                              Expanded(
-                                  flex: 2,
-                                  child: Container(
-                                    margin: EdgeInsets.fromLTRB(35,10,15,10),
-                                    decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(15),
-                                        boxShadow: [
-                                          BoxShadow(blurStyle: BlurStyle.solid,blurRadius:0.10)
-                                        ],
-                                        color: Colors.white,
-                                    ),
-                                    child:Column(
-                                      children: [
-                                        SizedBox(height:10,),
-                                        Row(
-                                          mainAxisAlignment: MainAxisAlignment.end,
-                                          children: [
-                                            Icon(Icons.add,size:18,color: darkBlue,),
-                                            Text("INVITE",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
-                                            SizedBox(width: 10,)
-                                          ],
-                                        ),
-                                        Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                          children: [
-                                            Text("Ansu Vajani",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
-                                            Text("Bengaluru | Salary",style: TextStyle(color: Colors.blueGrey[500],fontSize:16,fontWeight: FontWeight.w400),),
-                                            Text("Within 100 m",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
-                                          ],
-                                        ),
-                                        SizedBox(height:5,),
-                                        Container(
-                                          height: 20,
-                                          width:size.width/2.5,
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(50),
-                                            color: Colors.grey
-                                          ),
-                                          child: Container(
-                                            height: size.height,
-                                            decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(50),
-                                                color: darkBlue
+                            },
+                            child: Column(
+                              children: [
+                                Container(
+                                  height:size.height/2.2,
+                                  // color: Colors.pinkAccent,
+                                  child: Stack(
+                                    children: [
+                                      Column(
+                                        children: [
+                                          Expanded(
+                                            flex: 2,
+                                            child: Container(
+                                              margin: EdgeInsets.fromLTRB(35,10,15,10),
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(15),
+                                                boxShadow: [
+                                                  BoxShadow(blurStyle: BlurStyle.solid,blurRadius:0.10)
+                                                ],
+                                                color: Colors.white,
+                                              ),
+                                              child:Column(
+                                                children: [
+                                                  SizedBox(height:10,),
+                                                  Row(
+                                                    mainAxisAlignment: MainAxisAlignment.end,
+                                                    children: [
+                                                      Icon(Icons.add,size:18,color: darkBlue,),
+                                                      Text("INVITE",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
+                                                      SizedBox(width: 10,)
+                                                    ],
+                                                  ),
+                                                  Column(
+                                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                                    children: [
+                                                      Text("Ansu Vajani",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
+                                                      Text("Bengaluru | Salary",style: TextStyle(color: Colors.blueGrey[500],fontSize:16,fontWeight: FontWeight.w400),),
+                                                      Text("Within 100 m",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
+                                                    ],
+                                                  ),
+                                                  SizedBox(height:5,),
+                                                  Container(
+                                                    height: 20,
+                                                    width:size.width/2.5,
+                                                    decoration: BoxDecoration(
+                                                        borderRadius: BorderRadius.circular(50),
+                                                        color: Colors.grey
+                                                    ),
+                                                    child: Container(
+                                                      height: size.height,
+                                                      decoration: BoxDecoration(
+                                                          borderRadius: BorderRadius.circular(50),
+                                                          color: darkBlue
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  SizedBox(height:30,),
+                                                  Container(
+                                                    padding: EdgeInsets.only(left:20),
+                                                    child: Column(
+                                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                                      children: [
+                                                        Text("Coffee | Business | Friendship",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
+                                                        Text(
+                                                          "Hi community! I am open to new connection.",
+                                                          style: TextStyle(color:Colors.blueGrey[500],fontSize:16,fontWeight: FontWeight.w400),
+                                                        ),
+                                                        SizedBox(height: 5,),
+                                                        Text(
+                                                          "I am a Digital Marketer,Freelancer works ahead for growing business digitally.",
+                                                          style: TextStyle(color: Colors.blueGrey[500],fontSize:16,fontWeight: FontWeight.w400),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                        SizedBox(height:30,),
-                                        Container(
-                                          padding: EdgeInsets.only(left:20),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Text("Coffee | Business | Friendship",style: TextStyle(color: darkBlue,fontSize:16,fontWeight: FontWeight.bold),),
-                                              Text(
-                                                "Hi community! I am open to new connection.",
-                                                style: TextStyle(color:Colors.blueGrey[500],fontSize:16,fontWeight: FontWeight.w400),
-                                              ),
-                                              SizedBox(height: 5,),
-                                              Text(
-                                                "I am a Digital Marketer,Freelancer works ahead for growing business digitally.",
-                                                style: TextStyle(color: Colors.blueGrey[500],fontSize:16,fontWeight: FontWeight.w400),
-                                              ),
-                                            ],
+                                        ],
+                                      ),
+                                      Align(
+                                        alignment: Alignment.topLeft,
+                                        child: Container(
+                                          margin: EdgeInsets.only(left:10,top:20),
+                                          width: size.width * 0.25,
+                                          height: size.height * 0.13,
+                                          child: Card(
+                                            elevation: 12,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(15.0),
+                                            ),
+                                            color:Colors.blueGrey[200],
+                                            child: Center(child: Text("AV",style: TextStyle(fontWeight: FontWeight.bold,fontSize:28,color:darkBlue),)),
                                           ),
                                         ),
-
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   ),
-                              ),
-                            ],
-                          ),
-                          Align(
-                            alignment: Alignment.topLeft,
-                            child: Container(
-                              margin: EdgeInsets.only(left:10,top:20),
-                              width: size.width * 0.25,
-                              height: size.height * 0.13,
-                              child: Card(
-                                elevation: 12,
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15.0),
                                 ),
-                                color:Colors.blueGrey[200],
-                                child: Center(child: Text("AV",style: TextStyle(fontWeight: FontWeight.bold,fontSize:28,color:darkBlue),)),
-                              ),
+                              ],
                             ),
-                          ),
-                        ],
-                      ),
+                          );
+                        }
                     ),
-                  ],
-                ),
+                  ),
+                )
               ],
             ),
           ),
@@ -256,3 +271,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
