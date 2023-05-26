@@ -1,16 +1,4 @@
-# blackcoffer
+#Bring your Business online
+![explore](https://github.com/prachi-git99/Business_app_UI/assets/83897459/23d292f3-a817-4ae8-9697-5df877c10d5c)
+![refine](https://github.com/prachi-git99/Business_app_UI/assets/83897459/2105038e-5813-4ec9-a1c1-230dd0994d0f)
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
