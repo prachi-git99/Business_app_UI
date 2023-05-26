@@ -1,6 +1,8 @@
 import 'package:blackcoffer/constants/colors.dart';
 import 'package:blackcoffer/constants/styles.dart';
+import 'package:blackcoffer/refineScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 
@@ -56,7 +58,7 @@ class HomeScreen extends StatelessWidget {
               GestureDetector(
                 child:InkWell(
                   onTap: (){
-
+                    Get.to(()=>RefineScreen());
                   },
                   child: Container(
                       margin:new EdgeInsets.only(right:18,top:5),
@@ -198,13 +200,15 @@ class HomeScreen extends StatelessWidget {
                                                   SizedBox(height:5,),
                                                   Container(
                                                     height: 20,
-                                                    width:size.width/2.5,
+                                                    width:150,
+                                                    alignment: Alignment.topLeft,
                                                     decoration: BoxDecoration(
                                                         borderRadius: BorderRadius.circular(50),
                                                         color: Colors.grey
                                                     ),
                                                     child: Container(
                                                       height: size.height,
+                                                      width:80,
                                                       decoration: BoxDecoration(
                                                           borderRadius: BorderRadius.circular(50),
                                                           color: darkBlue
